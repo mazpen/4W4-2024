@@ -13,13 +13,38 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
-/* :root {
-  --couleur-arriere-entete: #275227;
+:root {
+  /* 
+  --couleur-arriere-entete : #275227;
   --couleur-arriere-acceuil: #203b20;
-  --couleur-arriere-evenement: #043a04;
-  --couleur-arriere-galerie: #324632;
-  --couleur-arriere-footer: #5f765f;
-} */
+  --couleur-arriere-evenement : #043a04;
+  --couleur-arriere-galerie : #324632;
+  --couleur-arriere-footer : #5f765f;
+  */
+  /*calcul des teintes*/
+  --u1: 180;
+  --u2: calc(var(--u1) + 180);
+  --u3: calc(var(--u2) - 30);
+  --u4: calc(var(--u2) + 30)
+  /*la saturation*/
+  --s-arriere : 100%;
+  --s-avant: 50%;
+  /*la luminosite*/
+  --l-arriere: 30%;
+  --l-avant: 70%;
+  /*couleur arriere-plan*/
+  --couleur-arriere-entete: hsl(var(--u1), var(--s-arriere), var(--s-arriere));
+  --couleur-arriere-acceuil: hsl(var(--u1), var(--s-arriere), var(--s-arriere));
+  --couleur-arriere-evenement: hsl(var(--u1), var(--s-arriere), var(--s-arriere));
+  --couleur-arriere-galerie: hsl(var(--u1), var(--s-arriere), var(--s-arriere));
+  --couleur-arriere-footer: hsl(var(--u1), var(--s-arriere), var(--s-arriere));
+  /*couleur avant-plan*/
+  --couleur-avant-entete: hsl(var(--u1), var(--s-avant), var(--s-avant));
+  --couleur-avant-acceuil: hsl(var(--u1), var(--s-avant), var(--s-avant));
+  --couleur-avant-evenement: hsl(var(--u1), var(--s-avant), var(--s-avant));
+  --couleur-avant-galerie: hsl(var(--u1), var(--s-avant), var(--s-avant));
+  --couleur-avant-footer: hsl(var(--u1), var(--s-avant), var(--s-avant));
+}
 
 * {
   margin: 0;
@@ -48,22 +73,27 @@ body {
 
 #entete {
   background-color: var(--couleur-arriere-entete);
+  color: var(--couleur-avant-entete);
 }
 
 #accueil {
   background-color: var(--couleur-arriere-accueil);
+  color: var(--couleur-avant-acceuil);
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
+  color: var(--couleur-avant-evenement);
 }
 
 #galerie {
   background-color: var(--couleur-arriere-galerie);
+  color: var(--couleur-avant-galerie);
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
+  color: var(--couleur-avant-footer);
 }
 
 h1 {
