@@ -13,13 +13,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
-:root {
+/* :root {
   --couleur-arriere-entete: #275227;
   --couleur-arriere-acceuil: #203b20;
   --couleur-arriere-evenement: #043a04;
   --couleur-arriere-galerie: #324632;
   --couleur-arriere-footer: #5f765f;
-}
+} */
 
 * {
   margin: 0;
