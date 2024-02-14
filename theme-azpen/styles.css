@@ -97,6 +97,7 @@ body {
 #galerie {
   background-color: var(--couleur-arriere-galerie);
   color: var(--couleur-avant-galerie);
+  position: relative;
 }
 
 #footer {
@@ -119,7 +120,7 @@ h2 {
 
 .vague {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
