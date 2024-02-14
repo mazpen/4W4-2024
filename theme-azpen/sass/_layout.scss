@@ -19,26 +19,29 @@ body{
 .global > header,
 .global > footer {
     flex : 0 1 900px;
-    // border : 1px solid #aaa;
+    /* border : 1px solid #aaa;*/
     padding: 3rem 1rem;
     background-color: rgba(200, 130, 179, 0.1);
 }
 
 #entete, #footer{
-
+    display: flex;
 }
 
 #entete{
     background-color: var(--couleur-arriere-entete);
     color: var(--couleur-avant-entete);
+    position: relative;
 }
-#accueil{
-    background-color: var(--couleur-arriere-accueil);
+#acceuil{
+    background-color: var(--couleur-arriere-acceuil);
     color: var(--couleur-avant-acceuil);
+    position: relative;
 }
 #evenement{
     background-color: var(--couleur-arriere-evenement);
     color: var(--couleur-avant-evenement);
+    position: relative;
 }
 #galerie{
     background-color: var(--couleur-arriere-galerie);

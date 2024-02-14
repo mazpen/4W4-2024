@@ -25,25 +25,25 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --u1: 180;
   --u2: calc(var(--u1) + 180);
   --u3: calc(var(--u2) - 30);
-  --u4: calc(var(--u2) + 30)
+  --u4: calc(var(--u2) + 30);
   /*la saturation*/
-  --s-arriere : 100%;
+  --s-arriere: 100%;
   --s-avant: 50%;
   /*la luminosite*/
   --l-arriere: 30%;
   --l-avant: 70%;
   /*couleur arriere-plan*/
-  --couleur-arriere-entete: hsl(var(--u1), var(--s-arriere), var(--s-arriere));
-  --couleur-arriere-acceuil: hsl(var(--u1), var(--s-arriere), var(--s-arriere));
-  --couleur-arriere-evenement: hsl(var(--u1), var(--s-arriere), var(--s-arriere));
-  --couleur-arriere-galerie: hsl(var(--u1), var(--s-arriere), var(--s-arriere));
-  --couleur-arriere-footer: hsl(var(--u1), var(--s-arriere), var(--s-arriere));
+  --couleur-arriere-entete: hsl( var(--u1), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-acceuil: hsl( var(--u2), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-evenement: hsl( var(--u3), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-galerie: hsl( var(--u4), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-footer: hsl( var(--u1), var(--s-arriere), var(--l-arriere));
   /*couleur avant-plan*/
-  --couleur-avant-entete: hsl(var(--u1), var(--s-avant), var(--s-avant));
-  --couleur-avant-acceuil: hsl(var(--u1), var(--s-avant), var(--s-avant));
-  --couleur-avant-evenement: hsl(var(--u1), var(--s-avant), var(--s-avant));
-  --couleur-avant-galerie: hsl(var(--u1), var(--s-avant), var(--s-avant));
-  --couleur-avant-footer: hsl(var(--u1), var(--s-avant), var(--s-avant));
+  --couleur-avant-entete: hsl( var(--u1), var(--s-avant), var(--l-avant));
+  --couleur-avant-acceuil: hsl( var(--u2), var(--s-avant), var(--l-avant));
+  --couleur-avant-evenement: hsl( var(--u3), var(--s-avant), var(--l-avant));
+  --couleur-avant-galerie: hsl( var(--u4), var(--s-avant), var(--l-avant));
+  --couleur-avant-footer: hsl( var(--u1), var(--s-avant), var(--l-avant));
 }
 
 * {
@@ -67,23 +67,31 @@ body {
 .global > header,
 .global > footer {
   flex: 0 1 900px;
+  /* border : 1px solid #aaa;*/
   padding: 3rem 1rem;
   background-color: rgba(200, 130, 179, 0.1);
+}
+
+#entete, #footer {
+  display: flex;
 }
 
 #entete {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-avant-entete);
+  position: relative;
 }
 
-#accueil {
-  background-color: var(--couleur-arriere-accueil);
+#acceuil {
+  background-color: var(--couleur-arriere-acceuil);
   color: var(--couleur-avant-acceuil);
+  position: relative;
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
   color: var(--couleur-avant-evenement);
+  position: relative;
 }
 
 #galerie {
@@ -107,4 +115,25 @@ h2 {
   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
   font-weight: 500;
   font-style: normal;
+}
+
+.vague {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 72px;
+}
+
+.vague .shape-fill {
+  fill: var(--couleur-arriere-acceuil);
 }
