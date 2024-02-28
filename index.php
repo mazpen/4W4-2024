@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?php get_ ?> normalize.css">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.css">
     <title>Theme gr/cr1</title>
 </head>
@@ -27,6 +27,22 @@
     <div id="acceuil" class="global">
         <section>
             <h2>Acceuil</h2>
+            <?php
+                // if(have_posts()){
+                //     while (the_post()) {
+                //         the_post();
+                //         the_title('<h3>','</h3>');
+                //     };
+                // };
+
+                if (have_posts()):
+                    while(have_posts()):the_post();?>
+                    <h3>
+                        <?php the_title();?>
+                    </h3>
+                   <?php echo wp_trim_words(grt_the_content(),20); ?>
+                   <?php endwhile;?>
+                   <?php endif; ?>
         </section>
     </div>
     <div id="evenement" class="global">
