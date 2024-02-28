@@ -1,25 +1,20 @@
+
 /*
-Sélecteur textuel de base
-
-https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
-https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjUwMHB4IiwibWF4V2lkdGgiOiI5MDBweCIsIm1pbkZvbnRTaXplIjoiMTZweCIsIm1heEZvbnRTaXplIjoiNDhweCJ9
-
+https://chrisburnell.com/clamp-calculator/
 */
-
-h1 {
-    font-size: clamp(1.5rem, -2.875rem + 14vw, 5rem);
-    color : rgba(#092918, .3);
+h1{
+   font-size : clamp(1.25rem, -2.656rem + 12.5vw, 4.375rem);
+   font-weight: 600;
+   font-style: normal;
 }
-h2 { 
-    font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
-    color : rgba(#092918, .7);
+
+h2{
+   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
+   font-weight: 500;
+   font-style: normal;
 }
-h3 {}
-h4 {}
-h5 {}
-h6 {}
-
-p {}
-
-hr {}
-
+h3{}
+h4{}
+h5{}
+h6{}
+h7{}
