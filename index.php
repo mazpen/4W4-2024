@@ -40,7 +40,7 @@
                     <h3>
                         <?php the_title();?>
                     </h3>
-                   <?php echo wp_trim_words(grt_the_content(),20); ?>
+                   <?php echo wp_trim_words(get_the_content(),20); ?>
                    <?php endwhile;?>
                    <?php endif; ?>
         </section>
