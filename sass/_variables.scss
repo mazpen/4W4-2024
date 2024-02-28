@@ -1,37 +1,15 @@
+
+/*
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+*/
 :root {
-    /* 
-    --couleur-arriere-entete : #275227;
-    --couleur-arriere-acceuil: #203b20;
-    --couleur-arriere-evenement : #043a04;
-    --couleur-arriere-galerie : #324632;
-    --couleur-arriere-footer : #5f765f;
-    */
 
-    /*calcul des teintes*/
-    --u1: 180; // couleur initiale
-    --u2: calc(var(--u1) + 180); 
-    --u3: calc(var(--u2) - 30); 
-    --u4: calc(var(--u2) + 30);
-
-    /*la saturation*/
-    --s-arriere : 100%;
-    --s-avant : 50%;
-    /*la luminosite*/
-    --l-arriere: 30%;
-    --l-avant: 70%;
-
-
-    /*couleur arriere-plan*/
-    --couleur-arriere-entete : hsl( var(--u1), var(--s-arriere), var(--l-arriere));
-    --couleur-arriere-acceuil: hsl( var(--u2), var(--s-arriere), var(--l-arriere));
-    --couleur-arriere-evenement : hsl( var(--u3), var(--s-arriere), var(--l-arriere));
-    --couleur-arriere-galerie : hsl( var(--u4), var(--s-arriere), var(--l-arriere));
-    --couleur-arriere-footer : hsl( var(--u1), var(--s-arriere), var(--l-arriere));
-
-    /*couleur avant-plan*/
-    --couleur-avant-entete : hsl( var(--u1), var(--s-avant), var(--l-avant));
-    --couleur-avant-acceuil: hsl( var(--u2), var(--s-avant), var(--l-avant));
-    --couleur-avant-evenement : hsl( var(--u3), var(--s-avant), var(--l-avant));
-    --couleur-avant-galerie : hsl( var(--u4), var(--s-avant), var(--l-avant));
-    --couleur-avant-footer : hsl( var(--u1), var(--s-avant), var(--l-avant));
+    --couleur-arriere-entete: #77c2e5;
+    --couleur-arriere-accueil: #c1d32d;
+    --couleur-arriere-evenement: #dd8211;
+    --couleur-arriere-galerie: #8cee99;
+    --couleur-arriere-footer: #1d3f9f;
 }
+
+
+

@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/*
+Theme Name: theme-gr2
+Theme URI: https://referenced.ca
+Author: Eddy Martin
+Author URI: https://wordpress.org/
+Description: Thème de base développé dans le cours 4W4
+Version: 1.0
+
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: theme-gr2
+Ce thème a été développé dans le cadre du cours 4W4
+*/
+/* ////////////////////////////////////////// */
+/* Variables css                              */
+/* ////////////////////////////////////////// */
+/*
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+*/
+:root {
+  --couleur-arriere-entete: #77c2e5;
+  --couleur-arriere-accueil: #c1d32d;
+  --couleur-arriere-evenement: #dd8211;
+  --couleur-arriere-galerie: #8cee99;
+  --couleur-arriere-footer: #1d3f9f;
+}
+
+/* ////////////////////////////////////////// */
+/* règles de base                             */
+/* ////////////////////////////////////////// */
+/*
+Sélecteur textuel de base
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
+https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjUwMHB4IiwibWF4V2lkdGgiOiI5MDBweCIsIm1pbkZvbnRTaXplIjoiMTZweCIsIm1heEZvbnRTaXplIjoiNDhweCJ9
+
+*/
+h1 {
+  font-size: clamp(1.5rem, -2.875rem + 14vw, 5rem);
+  color: rgba(9, 41, 24, 0.3);
+}
+
+h2 {
+  font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
+  color: rgba(9, 41, 24, 0.7);
+}
+
+/* ////////////////////////////////////////// */
+/* règles de la pagination                             */
+/* ////////////////////////////////////////// */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "prompt", Arial, Helvetica, sans-serif;
+}
+
+.global {
+  display: flex;
+  justify-content: center;
+  min-height: 30vh;
+}
+
+.global > section,
+.global > header,
+.global > footer {
+  flex: 0 1 900px;
+  background-color: rgba(23, 84, 215, 0.1);
+  padding: 5rem 1rem;
+}
+
+#entete {
+  background-color: var(--couleur-arriere-entete);
+}
+
+#accueil {
+  background-color: var(--couleur-arriere-accueil);
+}
+
+#galerie {
+  background-color: var(--couleur-arriere-galerie);
+}
+
+#evenement {
+  background-color: var(--couleur-arriere-evenement);
+}
+
+#footer {
+  background-color: var(--couleur-arriere-footer);
+}/*# sourceMappingURL=style.css.map */
