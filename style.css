@@ -1,49 +1,23 @@
+@charset "UTF-8";
 /*
-Theme Name: Theme Azpen
-Author: Azpen Sbrizzi
+Theme Name: Theme Eddy
+Author: Eddy Martin
 Author URI: https://referenced.ca/
-Description: theme de base developpe dans le cour de 4W4
+Description: Thème de base développé dans le cours 4W4
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: theme-azpen
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Text Domain: theme-eddy
 */
 /*
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
 :root {
-  /* 
-  --couleur-arriere-entete : #275227;
-  --couleur-arriere-acceuil: #203b20;
-  --couleur-arriere-evenement : #043a04;
-  --couleur-arriere-galerie : #324632;
-  --couleur-arriere-footer : #5f765f;
-  */
-  /*calcul des teintes*/
-  --u1: 180;
-  --u2: calc(var(--u1) + 180);
-  --u3: calc(var(--u2) - 30);
-  --u4: calc(var(--u2) + 30);
-  /*la saturation*/
-  --s-arriere: 100%;
-  --s-avant: 50%;
-  /*la luminosite*/
-  --l-arriere: 30%;
-  --l-avant: 70%;
-  /*couleur arriere-plan*/
-  --couleur-arriere-entete: hsl( var(--u1), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-acceuil: hsl( var(--u2), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-evenement: hsl( var(--u3), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-galerie: hsl( var(--u4), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-footer: hsl( var(--u1), var(--s-arriere), var(--l-arriere));
-  /*couleur avant-plan*/
-  --couleur-avant-entete: hsl( var(--u1), var(--s-avant), var(--l-avant));
-  --couleur-avant-acceuil: hsl( var(--u2), var(--s-avant), var(--l-avant));
-  --couleur-avant-evenement: hsl( var(--u3), var(--s-avant), var(--l-avant));
-  --couleur-avant-galerie: hsl( var(--u4), var(--s-avant), var(--l-avant));
-  --couleur-avant-footer: hsl( var(--u1), var(--s-avant), var(--l-avant));
+  --couleur-arriere-entete: #618aad;
+  --couleur-arriere-accueil: #0f0;
+  --couleur-arriere-evenement: #045;
+  --couleur-arriere-galerie: rgb(223, 230, 42);
+  --couleur-arriere-footer: #630;
 }
 
 * {
@@ -54,7 +28,7 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Prompt", sans-serif;
+  font-family: "prompt", sans-serif;
 }
 
 .global {
@@ -67,47 +41,34 @@ body {
 .global > header,
 .global > footer {
   flex: 0 1 900px;
-  /* border : 1px solid #aaa;*/
-  padding: 3rem 1rem;
-  background-color: rgba(200, 130, 179, 0.1);
-}
-
-#entete, #footer {
-  display: flex;
+  border: 1px solid #aaa;
 }
 
 #entete {
   background-color: var(--couleur-arriere-entete);
-  color: var(--couleur-avant-entete);
-  position: relative;
 }
 
-#acceuil {
-  background-color: var(--couleur-arriere-acceuil);
-  color: var(--couleur-avant-acceuil);
-  position: relative;
+#accueil {
+  background-color: var(--couleur-arriere-accueil);
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
-  color: var(--couleur-avant-evenement);
-  position: relative;
 }
 
 #galerie {
   background-color: var(--couleur-arriere-galerie);
-  color: var(--couleur-avant-galerie);
-  position: relative;
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
-  color: var(--couleur-avant-footer);
 }
 
+/*
+https://chrisburnell.com/clamp-calculator/
+*/
 h1 {
-  font-size: clamp(1rem, -3.219rem + 13.5vw, 4.375rem);
-  color: rgba(0, 0, 0, 0.5);
+  font-size: clamp(1.25rem, -2.656rem + 12.5vw, 4.375rem);
   font-weight: 600;
   font-style: normal;
 }
@@ -118,23 +79,17 @@ h2 {
   font-style: normal;
 }
 
-.vague {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
+.cours {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
 }
 
-.vague svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 72px;
-}
-
-.vague .shape-fill {
-  fill: var(--couleur-arriere-acceuil);
+.carte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 1 20%;
+  border: 1px solid #aaa;
 }
