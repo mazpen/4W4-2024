@@ -1,31 +1,29 @@
-# Labo #3
-## Création d'un site WP.
-- Adaptation du thème de exercice #1
-- Création du modèle index.php
-- Création de la branche labo3
-- minimum 3 commits
-- Un Readme.md qui contiendra:
-    - Le nom de l'auteur
-    - L'objectif du labo3
-    - Les réalisations
-    - Un lien vers la github-page
-- Décomposé le titre de chaque cours:
-    - sigle du cours ex: 582-4W4
-    - le titre du cours  ex: Conception d'interface et développement Web
-    - la durée du cours : 90h
+# labo #1
+## Introduction a Sass et revision de HTML/CSS
 
-- Garder les 30 premiers mots de la description du cours.
+-un dossier sass qui contient:
+    - un sous dossier base
+        - avec le fichier _h.scss
+        - avec le fichier _lien.scss
+    - le fichier style.scss
+- Création d'une pagination avec flexbox
+- Utilisation de polices Google-Font
 
-### La section galerie affichera la liste des cours du TIM en 4 colonnes.
-- La liste devra s'adapter aux différentes largeurs de fenêtre.
-- Chacune des cartes de cours sera formatés en en utilisant les flex box
+### Concevoir une page de plusieurs sections qui contient éléments:
+- Dossier Sass
+- normalize.css
+- style.css
 
-### Barème de correction
-- Organistion du code, 3 commits minimum (point)
-- Résultat sous forme de github page (.5 point)
-- Design global de la page (.5 point)
+A réaliser :
+- Compléter chacune des règles de style des éléments H
+- Changer les couleur de background et couleur des H
+- Améliorer le design général sans être trop spécifique
+- Ajouter deux variables
+- Créer plusieurs commits
+- Une github-page
+- https://eddytuto.github.io/4w4-2024-gr2/
 
-
-
-
-
+## Pour creer une nouvelle branch à travers le terminal de l'index
+- git status : permet de voir le status de la branch pour savoir si il y a des changement (travil non-commit).
+- git checkout "..." : permet de changer/transferer de branch a branch.
+- git branch "..." : permet de creer une nouvelle branche de travaille dans Github.
