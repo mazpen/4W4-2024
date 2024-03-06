@@ -38,8 +38,7 @@
 
                     }
                 }
-            */
-            if (have_posts()):
+                if (have_posts()):
                 while(have_posts()): the_post(); ?>
                 <div class="carte">
                     <h3><?php the_title(); ?></h3>  
@@ -47,7 +46,29 @@
                 </div> 
                <?php endwhile; ?>
             <?php endif; ?>
+            */
+            if (have_posts()):
+                while(have_posts()): the_post();
+                $titre = get_the_title();
+                $sigle = substr($titre,0,7);
+                $pos_parenthese = strpos($titre, '(');
+                $duree = substr($titre,$pos_parenthese);
+                $titre = substr($titre,7, $pos_parenthesep-7);
+
+            
+            ?>
+
             </div>
+        <div class="carte">
+        <h4><?php echo $sigle; ?></h4>
+        <h4><?php echo $titre; ?></h4>
+        <p><?php echo wp_trim_words(get_the_content(),20); ?></p>
+        <h4><?php echo $duree; ?></h4>
+        </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
+        </div>
+
         </section>
     </div>
     <div id="evenement" class="global diagonal">
