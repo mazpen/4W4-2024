@@ -8,7 +8,9 @@
 .carte{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex: 0  1 20%;
+    justify-content: center;
+    align-items: center;
+    flex: 0  1 calc(1100px/4);
     border : 1px solid #aaa;
+    background-color: var(--_couleur-arriere);
 }
