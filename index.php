@@ -59,13 +59,13 @@
             ?>
 
             </div>
-        <div class="carte">
-        <h4><?php echo $sigle; ?></h4>
-        <h4><?php echo $titre; ?></h4>
-        <p><?php echo wp_trim_words(get_the_content(),20); ?></p>
-        <h4><?php echo $duree; ?></h4>
-        </div>
-        <?php endwhile; ?>
+            <div class="carte">
+                <h4><?php echo $sigle; ?></h4>
+                <h3><?php echo $titre; ?></h3>
+                <p><?php echo wp_trim_words(get_the_content(),20); ?></p>
+                <h4><?php echo $duree; ?></h4>
+            </div>
+            <?php endwhile; ?>
         <?php endif; ?>
         </div>
 
