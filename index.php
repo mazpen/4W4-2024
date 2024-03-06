@@ -59,7 +59,7 @@
                 $sigle = substr($titre,0,7);
                 $pos_parenthese = strpos($titre, '(');
                 $duree = substr($titre,$pos_parenthese);
-                $titre = substr($titre,7, $pos_parenthesep-7);
+                $titre = substr($titre,7, $pos_parenthese-7);
 
             
             ?>
