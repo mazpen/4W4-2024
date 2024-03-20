@@ -12,6 +12,7 @@ body{
 .global {
     display : flex;
     justify-content: center;
+
 }
 
 .global > section,
@@ -26,21 +27,23 @@ body{
 
 .global > .entete__header{
     flex: 1;
+    
 }
 
 #entete, #footer {
     min-height: 20vh;
 }
 
-#menu{
-    min-height: 20vh;
+#menu__entete {
+    position : relative;
+    background-color: var(--couleur-arriere-menu);
 }
 
 #entete{
     background-color: var(--couleur-arriere-entete);
     color : var(--couleur-entete);
     position: relative;
-min-height: 100vh;
+    min-height: 100vh;
 
 
 }

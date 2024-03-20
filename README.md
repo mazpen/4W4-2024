@@ -1,29 +1,25 @@
-# labo #1
-## Introduction a Sass et revision de HTML/CSS
+# Labo 4
 
--un dossier sass qui contient:
-    - un sous dossier base
-        - avec le fichier _h.scss
-        - avec le fichier _lien.scss
-    - le fichier style.scss
-- Création d'une pagination avec flexbox
-- Utilisation de polices Google-Font
+### Créer une nouvelle branche « labo4 »
+### Création du menu principal
+- Ajouter un menu permettant d'accéder
+    -  à vos cinq cours préférés
+    -  à chacune des sections de la page
+- Le menu doit être formatter en utilisant 
+  composant/_menu.scss
+  Le menu doit être adaptatif et être amovible en    version mobile.
+### Création d'un header.php
+- Créer le template header.php qui contiendra la    structure d'entête de la page qui sera reproduite dans chacun des modules du thème
+### Création d'un « template-part » (gabarit)
+- Créer un template-part qui permettra d'afficher les vagues.
 
-### Concevoir une page de plusieurs sections qui contient éléments:
-- Dossier Sass
-- normalize.css
-- style.css
-
-A réaliser :
-- Compléter chacune des règles de style des éléments H
-- Changer les couleur de background et couleur des H
-- Améliorer le design général sans être trop spécifique
-- Ajouter deux variables
-- Créer plusieurs commits
-- Une github-page
-- https://eddytuto.github.io/4w4-2024-gr2/
-
-## Pour creer une nouvelle branch à travers le terminal de l'index
-- git status : permet de voir le status de la branch pour savoir si il y a des changement (travil non-commit).
-- git checkout "..." : permet de changer/transferer de branch a branch.
-- git branch "..." : permet de creer une nouvelle branche de travaille dans Github.
+## Barème de correction
+### integration et codification (1 point)
+- intégration de chacun des éléments précédents de façon structuré. (1 point)
+### Design général de la page et organisation (1 point)
+- Création d'une github-page à partir de index.htm
+- Création du readme.md avec:
+ - Le nom de l'auteur
+ - Un résumé des étapes du labo-4
+ - Un lien vers votre 'github-page
+- Production de 5 commits
